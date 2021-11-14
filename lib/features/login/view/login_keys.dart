@@ -1,4 +1,4 @@
-part of '../login_view.dart';
+part of './login_view.dart';
 
 enum _LoginKeys { welcome, signInDetail, email, password, forgot, signin }
 
