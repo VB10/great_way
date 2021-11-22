@@ -7,7 +7,7 @@ abstract class ILoginService {
   Future<UserResponseModel?> controlUser({required LoginRequestModel model});
   final INetworkManager networkManager;
 
-  final String _loginPath = '/api/login';
+  final String _loginPath = '/login';
 }
 
 class LoginService extends ILoginService {
@@ -16,7 +16,7 @@ class LoginService extends ILoginService {
   @override
   Future<UserResponseModel?> controlUser({required LoginRequestModel model}) async {
     final response = await networkManager.send<UserResponseModel, UserResponseModel>(_loginPath,
-        parseModel: UserResponseModel(), method: RequestType.POST);
+        data: model, parseModel: UserResponseModel(), method: RequestType.POST);
 
     return response.data;
   }
