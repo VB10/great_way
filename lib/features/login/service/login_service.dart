@@ -1,4 +1,5 @@
 import 'package:great_way/features/login/model/login_request_model.dart';
+import 'package:great_way/features/login/model/user_response_model.dart';
 import 'package:vexana/vexana.dart';
 
 abstract class ILoginService {

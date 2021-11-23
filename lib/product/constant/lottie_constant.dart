@@ -1,10 +1,12 @@
-enum LottieConstant { login }
+enum LottieConstant { login, welcome }
 
 extension LottieConstantExtension on LottieConstant {
   String get _value {
     switch (this) {
       case LottieConstant.login:
         return 'profile';
+      case LottieConstant.welcome:
+        return 'welcome';
     }
   }
 
